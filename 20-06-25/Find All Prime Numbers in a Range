@@ -1,0 +1,22 @@
+public class PrimeRange {
+    public static void main(String[] args) {
+        int start = 10, end = 50;
+        for (int i = start; i <= end; i++) {
+            boolean isPrime = true;
+            if (i <= 1) continue;
+            for (int j = 2; j <= Math.sqrt(i); j++)
+                if (i % j == 0) {
+                    isPrime = false;
+                    break;
+                }
+            if (isPrime)
+                System.out.print(i + " ");
+        }
+    }
+}
+
+Output:
+
+Copy
+Edit
+11 13 17 19 23 29 31 37 41 43 47
