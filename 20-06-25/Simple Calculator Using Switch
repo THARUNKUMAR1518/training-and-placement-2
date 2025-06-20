@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Calculator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double a = sc.nextDouble();
+        char op = sc.next().charAt(0);
+        double b = sc.nextDouble();
+        double res = 0;
+
+        switch (op) {
+            case '+': res = a + b; break;
+            case '-': res = a - b; break;
+            case '*': res = a * b; break;
+            case '/': res = b != 0 ? a / b : 0; break;
+            default: System.out.println("Invalid operator"); return;
+        }
+
+        System.out.println("Result: " + res);
+    }
+}
+
+Input:
+
+10 * 2
+
+Output:
+
+Result: 20.0
