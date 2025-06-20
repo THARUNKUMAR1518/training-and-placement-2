@@ -1,0 +1,11 @@
+import java.time.LocalDateTime;
+
+public class DateTimeNow {
+    public static void main(String[] args) {
+        LocalDateTime now = LocalDateTime.now();
+        System.out.println("Current Date & Time: " + now);
+    }
+}
+Output (Example):
+
+Current Date & Time: 2025-06-20 T20:41:23.456
