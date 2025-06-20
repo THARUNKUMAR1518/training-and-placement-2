@@ -1,0 +1,38 @@
+class Student {
+    String name;
+    int rollNumber;
+    double marks;
+
+    void input(String n, int r, double m) {
+        name = n;
+        rollNumber = r;
+        marks = m;
+    }
+
+    void display() {
+        System.out.println("Name: " + name);
+        System.out.println("Roll No: " + rollNumber);
+        System.out.println("Marks: " + marks);
+        System.out.println("Grade: " + getGrade());
+    }
+
+    String getGrade() {
+        if (marks >= 90) return "A+";
+        else if (marks >= 75) return "A";
+        else if (marks >= 60) return "B";
+        else if (marks >= 50) return "C";
+        else return "Fail";
+    }
+
+    public static void main(String[] args) {
+        Student s1 = new Student();
+        s1.input("Tharun", 101, 87.5);
+        s1.display();
+    }
+}
+
+Output:
+Name: Tharun
+Roll No: 101
+Marks: 87.5
+Grade: A
