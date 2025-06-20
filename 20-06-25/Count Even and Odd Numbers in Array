@@ -1,0 +1,14 @@
+public class EvenOddCount {
+    public static void main(String[] args) {
+        int[] arr = {10, 13, 22, 17, 8};
+        int even = 0, odd = 0;
+        for (int num : arr) {
+            if (num % 2 == 0) even++;
+            else odd++;
+        }
+        System.out.println("Even: " + even + ", Odd: " + odd);
+    }
+}
+
+output
+Even: 3, Odd: 2
