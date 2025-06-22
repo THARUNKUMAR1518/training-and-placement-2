@@ -1,0 +1,98 @@
+import java.util.Scanner;
+
+class BankAccount {
+    String accountHolder;
+    int accountNumber;
+    double balance;
+
+    BankAccount(String name, int number, double initialBalance) {
+        accountHolder = name;
+        accountNumber = number;
+        balance = initialBalance;
+    }
+
+    void deposit(double amount) {
+        balance += amount;
+        System.out.println("Deposited: " + amount);
+    }
+
+    void withdraw(double amount) {
+        if (amount > balance)
+            System.out.println("Insufficient funds!");
+        else {
+            balance -= amount;
+            System.out.println("Withdrawn: " + amount);
+        }
+    }
+
+    void display() {
+        System.out.println("Account Holder: " + accountHolder);
+        System.out.println("Account Number: " + accountNumber);
+        System.out.println("Current Balance: " + balance);
+    }
+}
+
+public class BankApp {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        BankAccount acc = new BankAccount("Tharun", 123456, 1000.0);
+
+        int choice;
+        do {
+            System.out.println("\n--- Bank Menu ---");
+            System.out.println("1. Deposit\n2. Withdraw\n3. View Balance\n4. Exit");
+            System.out.print("Enter choice: ");
+            choice = sc.nextInt();
+
+            switch (choice) {
+                case 1:
+                    System.out.print("Enter amount to deposit: ");
+                    acc.deposit(sc.nextDouble());
+                    break;
+                case 2:
+                    System.out.print("Enter amount to withdraw: ");
+                    acc.withdraw(sc.nextDouble());
+                    break;
+                case 3:
+                    acc.display();
+                    break;
+                case 4:
+                    System.out.println("Thank you for banking with us!");
+                    break;
+                default:
+                    System.out.println("Invalid choice!");
+            }
+        } while (choice != 4);
+
+        sc.close();
+    }
+}
+
+Output
+
+
+--- Bank Menu ---
+1. Deposit
+2. Withdraw
+3. View Balance
+4. Exit
+Enter choice: 1
+Enter amount to deposit: 500
+Deposited: 500.0
+
+--- Bank Menu ---
+Enter choice: 3
+Account Holder: Tharun
+Account Number: 123456
+Current Balance: 1500.0
+
+--- Bank Menu ---
+Enter choice: 2
+Enter amount to withdraw: 700
+Withdrawn: 700.0
+
+--- Bank Menu ---
+Enter choice: 3
+Account Holder: Tharun
+Account Number: 123456
+Current Balance: 800.0
