@@ -1,4 +1,4 @@
-public class RemoveWhitespace {
+ public class RemoveWhitespace {
     public static void main(String[] args) {
         String str = "  Java   is   awesome! ";
         String noSpaces = str.replaceAll("\\s+", "");
