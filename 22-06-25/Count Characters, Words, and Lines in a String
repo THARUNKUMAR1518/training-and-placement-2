@@ -1,0 +1,18 @@
+public class CountText {
+    public static void main(String[] args) {
+        String text = "Hello World!\nThis is Java.\nIt is fun.";
+        int chars = text.length();
+        int words = text.split("\\s+").length;
+        int lines = text.split("\n").length;
+
+        System.out.println("Characters: " + chars);
+        System.out.println("Words: " + words);
+        System.out.println("Lines: " + lines);
+    }
+}
+
+Output:
+
+Characters: 39  
+Words: 9  
+Lines: 3
