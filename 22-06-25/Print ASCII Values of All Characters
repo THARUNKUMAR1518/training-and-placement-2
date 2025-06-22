@@ -1,0 +1,13 @@
+public class ASCIIValues {
+    public static void main(String[] args) {
+        for (char c = 'A'; c <= 'Z'; c++)
+            System.out.println(c + ": " + (int)c);
+    }
+}
+Output (partial):
+
+A: 65  
+B: 66  
+C: 67  
+...  
+Z: 90
