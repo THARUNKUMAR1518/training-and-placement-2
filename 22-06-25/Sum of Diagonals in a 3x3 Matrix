@@ -1,0 +1,24 @@
+public class DiagonalSum {
+    public static void main(String[] args) {
+        int[][] matrix = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+
+        int primary = 0, secondary = 0;
+
+        for (int i = 0; i < 3; i++) {
+            primary += matrix[i][i];
+            secondary += matrix[i][2 - i];
+        }
+
+        System.out.println("Primary Diagonal Sum: " + primary);
+        System.out.println("Secondary Diagonal Sum: " + secondary);
+    }
+}
+
+Output:
+
+Primary Diagonal Sum: 15  
+Secondary Diagonal Sum: 15
