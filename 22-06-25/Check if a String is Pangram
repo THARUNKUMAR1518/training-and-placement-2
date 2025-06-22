@@ -1,0 +1,18 @@
+public class PangramCheck {
+    public static void main(String[] args) {
+        String str = "The quick brown fox jumps over a lazy dog".toLowerCase();
+        boolean[] alpha = new boolean[26];
+
+        for (char c : str.toCharArray())
+            if (c >= 'a' && c <= 'z')
+                alpha[c - 'a'] = true;
+
+        boolean isPangram = true;
+        for (boolean b : alpha)
+            if (!b) isPangram = false;
+
+        System.out.println(isPangram ? "Pangram" : "Not Pangram");
+    }
+}
+Output:
+Pangram
