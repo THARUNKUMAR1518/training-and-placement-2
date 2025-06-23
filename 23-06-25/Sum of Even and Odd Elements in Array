@@ -1,0 +1,19 @@
+public class SumEvenOdd {
+    public static void main(String[] args) {
+        int[] arr = {10, 5, 8, 3, 7};
+        int evenSum = 0, oddSum = 0;
+
+        for (int num : arr) {
+            if (num % 2 == 0)
+                evenSum += num;
+            else
+                oddSum += num;
+        }
+
+        System.out.println("Even Sum: " + evenSum);
+        System.out.println("Odd Sum: " + oddSum);
+    }
+}
+Output:
+Even Sum: 18  
+Odd Sum: 15
