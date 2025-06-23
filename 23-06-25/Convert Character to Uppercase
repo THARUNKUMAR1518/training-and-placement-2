@@ -1,0 +1,10 @@
+public class ToUpperCaseChar {
+    public static void main(String[] args) {
+        char ch = 'b';
+        char upper = Character.toUpperCase(ch);
+        System.out.println("Uppercase: " + upper);
+    }
+}
+Output:
+
+Uppercase: B
