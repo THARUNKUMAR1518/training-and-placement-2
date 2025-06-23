@@ -1,0 +1,21 @@
+public class CountCharTypes {
+    public static void main(String[] args) {
+        String str = "Java@123!";
+        int letters = 0, digits = 0, special = 0;
+
+        for (char ch : str.toCharArray()) {
+            if (Character.isLetter(ch)) letters++;
+            else if (Character.isDigit(ch)) digits++;
+            else special++;
+        }
+
+        System.out.println("Letters: " + letters);
+        System.out.println("Digits: " + digits);
+        System.out.println("Special Characters: " + special);
+    }
+}
+Output:
+
+Letters: 4  
+Digits: 3  
+Special Characters: 2
