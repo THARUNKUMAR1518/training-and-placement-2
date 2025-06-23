@@ -1,0 +1,32 @@
+class Circle {
+    double radius;
+
+    Circle(double r) {
+        radius = r;
+    }
+
+    double getArea() {
+        return Math.PI * radius * radius;
+    }
+
+    double getPerimeter() {
+        return 2 * Math.PI * radius;
+    }
+
+    public void display() {
+        System.out.println("Radius: " + radius);
+        System.out.println("Area: " + getArea());
+        System.out.println("Perimeter: " + getPerimeter());
+    }
+
+    public static void main(String[] args) {
+        Circle c = new Circle(7.5);
+        c.display();
+    }
+}
+
+Output:
+
+Radius: 7.5
+Area: 176.71458676442586
+Perimeter: 47.12388980384689
