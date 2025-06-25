@@ -1,0 +1,8 @@
+import requests
+
+response = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json")
+data = response.json()
+print("Bitcoin Price in USD:", data['bpi']['USD']['rate'])
+Output:
+
+Bitcoin Price in USD: 64,123.34
