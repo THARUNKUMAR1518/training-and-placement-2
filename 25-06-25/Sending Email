@@ -1,0 +1,16 @@
+import smtplib
+
+sender = "your_email@gmail.com"
+receiver = "someone@gmail.com"
+password = "your_app_password"
+message = "Subject: Hello\n\nThis is a test message."
+
+server = smtplib.SMTP("smtp.gmail.com", 587)
+server.starttls()
+server.login(sender, password)
+server.sendmail(sender, receiver, message)
+server.quit()
+print("Email sent!")
+
+Output:
+Email sent!
