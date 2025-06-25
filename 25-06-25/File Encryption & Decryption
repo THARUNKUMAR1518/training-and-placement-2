@@ -1,0 +1,13 @@
+def encrypt(text):
+    return ''.join(chr(ord(c)+3) for c in text)
+
+def decrypt(text):
+    return ''.join(chr(ord(c)-3) for c in text)
+
+with open("secret.txt", "w") as f:
+    f.write(encrypt("This is secret!"))
+
+with open("secret.txt", "r") as f:
+    print("Decrypted:", decrypt(f.read()))
+Output:
+Decrypted: This is secret!
