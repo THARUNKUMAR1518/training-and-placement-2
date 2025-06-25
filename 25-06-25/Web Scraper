@@ -1,0 +1,14 @@
+import requests
+from bs4 import BeautifulSoup
+
+res = requests.get("https://www.python.org")
+soup = BeautifulSoup(res.text, "html.parser")
+
+for link in soup.find_all("a")[:5]:
+    print(link.get("href"))
+Output (example):
+
+https://docs.python.org
+https://pypi.org/
+https://jobs.python.org
+https://blog.python.org
