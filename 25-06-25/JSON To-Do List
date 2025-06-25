@@ -1,0 +1,17 @@
+import json
+
+def add_task(task):
+    try:
+        with open("todo.json", "r") as f:
+            data = json.load(f)
+    except:
+        data = []
+    data.append(task)
+    with open("todo.json", "w") as f:
+        json.dump(data, f)
+
+add_task("Finish AI homework")
+
+Output
+
+["Finish AI homework"]
