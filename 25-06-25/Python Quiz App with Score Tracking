@@ -1,0 +1,41 @@
+def run_quiz(questions):
+    score = 0
+    for q in questions:
+        print("\n" + q["question"])
+        for opt in q["options"]:
+            print(opt)
+        answer = input("Your answer: ").strip().upper()
+        if answer == q["answer"]:
+            print("✅ Correct!")
+            score += 1
+        else:
+            print(f"❌ Wrong! The correct answer is {q['answer']}")
+    print(f"\n🏁 Quiz Complete! Your Score: {score}/{len(questions)}")
+
+quiz_questions = [
+    {
+        "question": "What is the output of 3 ** 2?",
+        "options": ["A. 6", "B. 9", "C. 8", "D. 5"],
+        "answer": "B"
+    },
+    {
+        "question": "Which keyword is used to define a function in Python?",
+        "options": ["A. function", "B. define", "C. def", "D. lambda"],
+        "answer": "C"
+    },
+    {
+        "question": "What is the output of len('Python')?",
+        "options": ["A. 6", "B. 7", "C. 5", "D. Error"],
+        "answer": "A"
+    }
+]
+
+run_quiz(quiz_questions)
+
+Sample Output:
+What is the output of 3 ** 2?
+A. 6
+B. 9
+C. 8
+D. 5
+Your answer: B
