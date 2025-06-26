@@ -12,3 +12,6 @@ else:
 
 Sample Input:
 Enter a sentence: I love learning Python!
+
+Output:
+😊 Positive Sentiment
