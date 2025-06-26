@@ -1,0 +1,18 @@
+paragraph = """Python is a powerful programming language. It is easy to learn, and used in AI, web development, and data science."""
+
+words = paragraph.lower().replace(".", "").replace(",", "").split()
+word_count = {}
+
+for word in words:
+    word_count[word] = word_count.get(word, 0) + 1
+
+print("Word Frequencies:")
+for k, v in word_count.items():
+    print(f"{k}: {v}")
+
+Output:
+Word Frequencies:
+python: 1
+is: 2
+a: 1
+powerful: 1
