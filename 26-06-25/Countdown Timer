@@ -1,0 +1,13 @@
+import time
+
+t = 5  # seconds
+while t:
+    print(f"Time left: {t} seconds")
+    time.sleep(1)
+    t -= 1
+
+print("⏰ Time's up!")
+
+Output:
+Time left: 5 seconds
+⏰ Time's up!
