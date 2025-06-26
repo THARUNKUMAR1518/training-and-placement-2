@@ -1,0 +1,6 @@
+sentence = "Python is amazing"
+words = sentence.split()
+reversed_sentence = ' '.join(reversed(words))
+print("Reversed:", reversed_sentence)
+Output:
+Reversed: amazing is Python
