@@ -1,0 +1,22 @@
+from tkinter import *
+
+def convert():
+    c = float(entry.get())
+    f = c * 9/5 + 32
+    result.config(text=f"{f:.2f} °F")
+
+win = Tk()
+win.title("Celsius to Fahrenheit")
+
+Label(win, text="Celsius:").grid(row=0, column=0)
+entry = Entry(win)
+entry.grid(row=0, column=1)
+Button(win, text="Convert", command=convert).grid(row=1, column=0, columnspan=2)
+result = Label(win, text="")
+result.grid(row=2, column=0, columnspan=2)
+
+win.mainloop()
+Output:
+
+GUI where you enter Celsius, click "Convert" → shows Fahrenheit.
+
