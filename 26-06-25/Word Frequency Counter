@@ -1,0 +1,13 @@
+with open("sample.txt", "w") as f:
+    f.write("hello world hello Python hello AI")
+
+with open("sample.txt", "r") as f:
+    words = f.read().split()
+
+freq = {}
+for word in words:
+    freq[word] = freq.get(word, 0) + 1
+
+print(freq)
+Output:
+{'hello': 3, 'world': 1, 'Python': 1, 'AI': 1}
