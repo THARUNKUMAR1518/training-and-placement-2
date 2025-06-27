@@ -1,0 +1,10 @@
+def dec_to_bin(n):
+    binary = ''
+    while n > 0:
+        binary = str(n % 2) + binary
+        n //= 2
+    return binary or "0"
+
+print("Binary of 10:", dec_to_bin(10))
+Output:
+Binary of 10: 1010
