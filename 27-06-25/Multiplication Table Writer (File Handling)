@@ -1,0 +1,9 @@
+num = 7
+with open("table.txt", "w") as f:
+    for i in range(1, 11):
+        f.write(f"{num} x {i} = {num*i}\n")
+
+print("Table written to 'table.txt'")
+Output:
+
+Table written to 'table.txt'
