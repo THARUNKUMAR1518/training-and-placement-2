@@ -1,0 +1,9 @@
+import qrcode
+
+data = "https://www.openai.com"
+qr = qrcode.make(data)
+
+qr.save("openai_qr.png")
+print("QR Code generated and saved as 'openai_qr.png'")
+🧾 Output:
+ QR Code generated and saved as 'openai_qr.png'
