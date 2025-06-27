@@ -1,0 +1,11 @@
+import json
+
+data = {'name': 'Tharun', 'marks': [95, 90, 85]}
+with open("student.json", "w") as f:
+    json.dump(data, f)
+
+with open("student.json", "r") as f:
+    loaded = json.load(f)
+print("Name:", loaded["name"])
+Output:
+Name: Tharun
