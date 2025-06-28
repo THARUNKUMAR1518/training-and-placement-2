@@ -12,7 +12,6 @@ class Solution(object):
     def RecursiveMaxPathSum(self, node):
         if not node:
             return 0
-        
         left = self.RecursiveMaxPathSum(node.left)
         right = self.RecursiveMaxPathSum(node.right)
 
