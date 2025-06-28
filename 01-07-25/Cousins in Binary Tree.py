@@ -16,7 +16,6 @@ class Solution(object):
                     
             if (x in level) ^ (y in level):
                 return False
-            
             if x in level and y in level:
                 if level[x] == level[y]:
                     return False
